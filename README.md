@@ -15,7 +15,7 @@
 
 ---
 
-## 🎯 Project Highlights
+##  Project Highlights
 
 | Feature | Description |
 |---------|-------------|
@@ -26,30 +26,30 @@
 
 ---
 
-## ✨ Features
+##  Features
 
 ### Recommendation Engine
-- 🔄 **Hybrid Algorithm** - Combines collaborative and content-based filtering for best results
-- 👥 **Collaborative Filtering** - "Users who liked this also liked..." (user-user similarity)
-- 🎯 **Content-Based Filtering** - TF-IDF vectorization + cosine similarity on product features
-- 🔥 **Popularity-Based** - Trending products based on views and purchases
+- **Hybrid Algorithm** - Combines collaborative and content-based filtering for best results
+- **Collaborative Filtering** - "Users who liked this also liked..." (user-user similarity)
+- **Content-Based Filtering** - TF-IDF vectorization + cosine similarity on product features
+- **Popularity-Based** - Trending products based on views and purchases
 
 ### Frontend
-- 🛒 **Shopping Cart** - Add/remove items, persistent across sessions
-- ❤️ **Wishlist** - Save favorites, move to cart functionality
-- 📊 **User Dashboard** - Personalized stats, interaction history, recommendation controls
-- ⚡ **Skeleton Loading** - No blocking spinners, UI appears instantly
-- 🎨 **Modern UI** - Glassmorphism, animations with Framer Motion
+- **Shopping Cart** - Add/remove items, persistent across sessions
+- **Wishlist** - Save favorites, move to cart functionality
+- **User Dashboard** - Personalized stats, interaction history, recommendation controls
+- **Skeleton Loading** - No blocking spinners, UI appears instantly
+- **Modern UI** - Glassmorphism, animations with Framer Motion
 
 ### Backend
-- 🚀 **FastAPI** - High-performance async Python framework
-- 📈 **Interaction Tracking** - Views, purchases, ratings, wishlist events
-- 🔌 **RESTful API** - Clean endpoints with automatic Swagger docs
-- 🧮 **ML Pipeline** - Scikit-learn, Pandas, NumPy for data processing
+- **FastAPI** - High-performance async Python framework
+- **Interaction Tracking** - Views, purchases, ratings, wishlist events
+- **RESTful API** - Clean endpoints with automatic Swagger docs
+- **ML Pipeline** - Scikit-learn, Pandas, NumPy for data processing
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 ```
@@ -68,7 +68,7 @@ TF-IDF Vectorization • Cosine Similarity • User-Item Matrices • Collaborat
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -89,7 +89,7 @@ TF-IDF Vectorization • Cosine Similarity • User-Item Matrices • Collaborat
 
 ---
 
-## 🚀 Setup
+##  Setup
 
 ### Prerequisites
 - Node.js 18+
@@ -113,7 +113,7 @@ App runs at `http://localhost:5173`
 
 ---
 
-## 🧠 How the Recommendation Engine Works
+##  How the Recommendation Engine Works
 
 ### 1. Hybrid (Default)
 Combines scores from collaborative and content-based filtering:
@@ -140,7 +140,7 @@ Ranks products by total interactions (views + purchases + ratings).
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ecomm/
@@ -163,7 +163,7 @@ ecomm/
 
 ---
 
-## 🎓 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
 - Building ML recommendation systems from scratch
@@ -174,7 +174,7 @@ This project demonstrates:
 
 ---
 
-## 📄 License
+##  License
 
 MIT License - feel free to use for learning or portfolio!
 
@@ -182,6 +182,6 @@ MIT License - feel free to use for learning or portfolio!
 
 <div align="center">
 
-**Built with ❤️ using React + FastAPI + Scikit-learn**
+**Built using React + FastAPI + Scikit-learn**
 
 </div>
