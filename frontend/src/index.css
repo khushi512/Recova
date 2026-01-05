@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Slate & Coral Color Palette */
+:root {
+  --primary: #334155;
+  --primary-dark: #1e293b;
+  --accent: #F97316;
+  --accent-hover: #EA580C;
+  --success: #10B981;
+  --background: #FAFAFA;
+  --surface: #FFFFFF;
+  --text: #1e293b;
+  --text-muted: #64748b;
+}
+
 @layer base {
   body {
-    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 min-h-screen;
+    @apply bg-gradient-to-br from-slate-50 via-gray-50 to-orange-50/30 min-h-screen;
+    color: var(--text);
   }
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300;
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100;
   }
-  
+
   .card-hover {
     @apply hover:scale-105 hover:-translate-y-2 transition-all duration-300;
   }
-  
+
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-xl;
+    @apply bg-gradient-to-r from-slate-700 to-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:from-slate-800 hover:to-slate-950 transition-all duration-300 shadow-md hover:shadow-xl;
   }
-  
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-md hover:shadow-xl;
+  }
+
   .glass {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+    @apply bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent;
+  }
+
+  .text-accent {
+    @apply text-orange-500;
   }
 }

@@ -44,7 +44,7 @@ const Cart = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-4 mb-8"
                 >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
                         <ShoppingCart className="w-6 h-6 text-white" />
                     </div>
                     <div>

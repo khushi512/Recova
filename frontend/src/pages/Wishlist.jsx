@@ -49,7 +49,7 @@ const Wishlist = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-4 mb-8"
                 >
-                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
                         <Heart className="w-6 h-6 text-white" />
                     </div>
                     <div>

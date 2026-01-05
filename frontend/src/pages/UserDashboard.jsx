@@ -127,7 +127,7 @@ const UserDashboard = () => {
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-slate-700 to-slate-900 rounded-full flex items-center justify-center">
                 <User className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -141,7 +141,7 @@ const UserDashboard = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                  className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
                 >
                   <ArrowRight className="w-5 h-5" />
                   View History
@@ -153,7 +153,7 @@ const UserDashboard = () => {
                 <select
                   value={userId}
                   onChange={(e) => setUserId(parseInt(e.target.value))}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
                   {[1, 2, 3, 4, 5, 10, 25, 50].map(id => (
                     <option key={id} value={id}>User {id}</option>
@@ -165,12 +165,12 @@ const UserDashboard = () => {
 
           {/* Stats Cards - Show immediately with loading states */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <StatCard icon={ShoppingBag} label="Views" value={viewsCount} color="bg-blue-100 text-blue-600" loading={statsLoading} />
+            <StatCard icon={ShoppingBag} label="Views" value={viewsCount} color="bg-slate-100 text-slate-600" loading={statsLoading} />
             <StatCard icon={ShoppingCart} label="Purchases" value={purchasesCount} color="bg-green-100 text-green-600" loading={statsLoading} />
             <StatCard icon={Star} label="Ratings" value={ratingsCount} color="bg-yellow-100 text-yellow-600" loading={statsLoading} />
             <StatCard icon={Heart} label="Wishlist" value={wishlistCount} color="bg-pink-100 text-pink-600" loading={false} />
-            <StatCard icon={ShoppingCart} label="In Cart" value={cartCount} color="bg-indigo-100 text-indigo-600" loading={false} />
-            <StatCard icon={TrendingUp} label="Total Spent" value={`$${totalSpent.toFixed(0)}`} color="bg-purple-100 text-purple-600" loading={statsLoading} />
+            <StatCard icon={ShoppingCart} label="In Cart" value={cartCount} color="bg-slate-100 text-slate-600" loading={false} />
+            <StatCard icon={TrendingUp} label="Total Spent" value={`$${totalSpent.toFixed(0)}`} color="bg-orange-100 text-orange-600" loading={statsLoading} />
           </div>
         </motion.div>
 
@@ -185,11 +185,11 @@ const UserDashboard = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setAlgorithm(algo)}
                 className={`px-4 py-2 rounded-lg font-medium capitalize transition-all ${algorithm === algo
-                  ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
                   : 'bg-white text-gray-700 hover:bg-gray-50'
                   }`}
               >
-                {algo === 'popular' ? '🔥 Popular' : algo}
+                {algo}
               </motion.button>
             ))}
           </div>
@@ -208,7 +208,7 @@ const UserDashboard = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3 mb-8"
           >
-            <Sparkles className="w-8 h-8 text-blue-600" />
+            <Sparkles className="w-8 h-8 text-orange-500" />
             <h2 className="text-3xl font-bold text-gray-900">Recommended For You</h2>
           </motion.div>
 
@@ -260,7 +260,7 @@ const UserDashboard = () => {
                           whileTap={{ scale: 0.95 }}
                           onClick={() => setRecsPage(page)}
                           className={`w-10 h-10 rounded-lg font-medium transition-all ${recsPage === page
-                            ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
+                            ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
                             : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                             }`}
                         >

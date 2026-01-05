@@ -173,7 +173,7 @@ const ProductDetail = () => {
 
                             {/* Price */}
                             <div className="mb-6">
-                                <span className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                                <span className="text-5xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
                                     ${product.price.toFixed(2)}
                                 </span>
                             </div>
@@ -290,7 +290,7 @@ const ProductDetail = () => {
                         viewport={{ once: true }}
                         className="flex items-center gap-3 mb-8"
                     >
-                        <TrendingUp className="w-8 h-8 text-blue-600" />
+                        <TrendingUp className="w-8 h-8 text-orange-500" />
                         <h2 className="text-3xl font-bold text-gray-900">You Might Also Like</h2>
                     </motion.div>
 

@@ -82,7 +82,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Always visible immediately */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 text-white py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,12 +100,12 @@ const Home = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Discover Products
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-pink-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-500">
               Tailored For You
             </span>
           </h1>
 
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             AI-powered recommendations that understand your style and preferences
           </p>
 
@@ -113,7 +113,7 @@ const Home = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTrending}
-            className="btn-primary text-lg"
+            className="btn-accent text-lg"
           >
             Explore Now
           </motion.button>
@@ -155,7 +155,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="flex items-center gap-3 mb-8"
           >
-            <TrendingUp className="w-8 h-8 text-blue-600" />
+            <TrendingUp className="w-8 h-8 text-orange-500" />
             <h2 className="text-3xl font-bold text-gray-900">Trending Now</h2>
           </motion.div>
 
@@ -193,8 +193,8 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedCategory === 'all'
-                  ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
+                : 'bg-white text-gray-700 hover:bg-gray-50'
                 }`}
             >
               All Products
@@ -212,8 +212,8 @@ const Home = () => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(cat.category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedCategory === cat.category
-                      ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
+                    : 'bg-white text-gray-700 hover:bg-gray-50'
                     }`}
                 >
                   {cat.category} ({cat.count})
@@ -264,8 +264,8 @@ const Home = () => {
                 onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                 disabled={currentPage === 1}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${currentPage === 1
-                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 shadow-sm'
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 shadow-sm'
                   }`}
               >
                 Previous
@@ -282,8 +282,8 @@ const Home = () => {
                       whileTap={{ scale: 0.95 }}
                       onClick={() => setCurrentPage(page)}
                       className={`w-10 h-10 rounded-lg font-medium transition-all ${currentPage === page
-                          ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                        ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
+                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                         }`}
                     >
                       {page}
@@ -298,8 +298,8 @@ const Home = () => {
                 onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                 disabled={currentPage === totalPages}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${currentPage === totalPages
-                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 shadow-sm'
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300 shadow-sm'
                   }`}
               >
                 Next

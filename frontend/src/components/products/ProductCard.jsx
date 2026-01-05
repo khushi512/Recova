@@ -61,7 +61,7 @@ const ProductCard = ({ product, showScore = false }) => {
             {/* Content */}
             <div className="p-5">
                 {/* Title */}
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-orange-500 transition-colors">
                     {product.title}
                 </h3>
 
@@ -86,8 +86,8 @@ const ProductCard = ({ product, showScore = false }) => {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className={`p-3 rounded-full shadow-lg hover:shadow-xl transition-all ${inCart
-                                ? 'bg-green-500'
-                                : 'bg-gradient-to-r from-blue-500 to-indigo-600'
+                            ? 'bg-green-500'
+                            : 'bg-gradient-to-r from-orange-500 to-orange-600'
                             }`}
                         onClick={handleCartClick}
                     >

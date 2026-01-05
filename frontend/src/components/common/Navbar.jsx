@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShoppingBag, Search, User, Menu, ShoppingCart, Heart } from 'lucide-react';
+import { ShoppingBag, Search, User, Menu, ShoppingCart, Heart, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useUser } from '../../context/UserContext';
@@ -23,11 +23,11 @@ const Navbar = () => {
                         <motion.div
                             whileHover={{ rotate: 360 }}
                             transition={{ duration: 0.5 }}
-                            className="bg-gradient-to-r from-blue-500 to-indigo-600 p-2 rounded-lg"
+                            className="bg-gradient-to-r from-slate-700 to-slate-900 p-2 rounded-lg"
                         >
                             <ShoppingBag className="w-6 h-6 text-white" />
                         </motion.div>
-                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
                             Recova
                         </span>
                     </Link>
@@ -53,6 +53,17 @@ const Navbar = () => {
                             <User className="w-4 h-4 text-blue-600" />
                             <span className="text-sm font-medium text-blue-600">User {userId}</span>
                         </div>
+
+                        {/* Home Button */}
+                        <Link to="/">
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="p-2 rounded-lg hover:bg-white/50 transition-colors cursor-pointer"
+                            >
+                                <Home className="w-6 h-6 text-gray-700" />
+                            </motion.div>
+                        </Link>
 
                         {/* Wishlist Button with Count */}
                         <Link to="/wishlist">

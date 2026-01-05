@@ -90,7 +90,7 @@ const ActivityHistory = () => {
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full"
+          className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full"
         />
       </div>
     );
@@ -107,7 +107,7 @@ const ActivityHistory = () => {
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
                 <History className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -122,7 +122,7 @@ const ActivityHistory = () => {
               <select
                 value={userId}
                 onChange={(e) => setUserId(parseInt(e.target.value))}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               >
                 {[1, 2, 3, 4, 5, 10, 25, 50].map(id => (
                   <option key={id} value={id}>User {id}</option>
@@ -146,7 +146,7 @@ const ActivityHistory = () => {
               className="glass rounded-lg p-4"
             >
               <p className="text-sm text-gray-600">Views</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.views}</p>
+              <p className="text-2xl font-bold text-slate-600">{stats.views}</p>
             </motion.div>
 
             <motion.div
@@ -170,7 +170,7 @@ const ActivityHistory = () => {
               className="glass rounded-lg p-4"
             >
               <p className="text-sm text-gray-600">Total Spent</p>
-              <p className="text-2xl font-bold text-purple-600">${stats.totalSpent.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-orange-600">${stats.totalSpent.toFixed(2)}</p>
             </motion.div>
           </div>
         </motion.div>
@@ -187,8 +187,8 @@ const ActivityHistory = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setFilterType(type)}
                 className={`px-4 py-2 rounded-lg font-medium capitalize transition-all ${filterType === type
-                    ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                  ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                   }`}
               >
                 {type}
@@ -240,18 +240,18 @@ const ActivityHistory = () => {
                       <div className="font-medium text-gray-900">{item.product_title}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-full">
+                      <span className="px-2 py-1 text-xs font-medium bg-slate-100 text-slate-700 rounded-full">
                         {item.product_category}
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${item.interaction_type === 'purchase'
-                          ? 'bg-green-100 text-green-700'
-                          : item.interaction_type === 'rating'
-                            ? 'bg-yellow-100 text-yellow-700'
-                            : item.interaction_type === 'wishlist'
-                              ? 'bg-pink-100 text-pink-700'
-                              : 'bg-gray-100 text-gray-700'
+                        ? 'bg-green-100 text-green-700'
+                        : item.interaction_type === 'rating'
+                          ? 'bg-yellow-100 text-yellow-700'
+                          : item.interaction_type === 'wishlist'
+                            ? 'bg-pink-100 text-pink-700'
+                            : 'bg-gray-100 text-gray-700'
                         }`}>
                         {item.interaction_type}
                         {item.rating && ` (${item.rating}⭐)`}
@@ -283,8 +283,8 @@ const ActivityHistory = () => {
                   onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                   disabled={currentPage === 1}
                   className={`px-4 py-2 rounded-lg font-medium transition-all ${currentPage === 1
-                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                     }`}
                 >
                   Previous
@@ -301,8 +301,8 @@ const ActivityHistory = () => {
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setCurrentPage(page)}
                         className={`w-10 h-10 rounded-lg font-medium transition-all ${currentPage === page
-                            ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg'
-                            : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                          ? 'bg-gradient-to-r from-slate-700 to-slate-900 text-white shadow-lg'
+                          : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                           }`}
                       >
                         {page}
@@ -317,8 +317,8 @@ const ActivityHistory = () => {
                   onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
                   disabled={currentPage === totalPages}
                   className={`px-4 py-2 rounded-lg font-medium transition-all ${currentPage === totalPages
-                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-300'
                     }`}
                 >
                   Next
